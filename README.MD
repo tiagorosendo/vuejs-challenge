@@ -27,7 +27,7 @@ npm run lint
 
 ### Run your unit tests
 ```
-npm run test:unit - not implemented
+npm run test:unit 
 ```
 
 ### Customize configuration

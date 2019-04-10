@@ -14,7 +14,7 @@
     </b-row>
     <b-row>
       <div class="col border-1">
-        <h3>{{ listName }}</h3>
+        <h3 id="listName">{{ listName }}</h3>
         <draggable class="list-group" :list="list" group="people" @change="log">
           <div v-for="(element, index) in list" :key="index">
             <div class="list-group-item">{{ element.name }} - {{ index }}</div>
@@ -48,7 +48,7 @@ export default {
   data() {
     return {
       inputItem: "TiagoTeste",
-      list: []
+      list: [{ name: "Tiago Teste" }]
     };
   },
   methods: {

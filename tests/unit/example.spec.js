@@ -1,13 +1,14 @@
 import { expect } from "chai";
 import { shallowMount } from "@vue/test-utils";
-import HelloWorld from "@/components/HelloWorld.vue";
+import DragArea from "@/components/DragArea.vue";
 
-describe("HelloWorld.vue", () => {
-  it("renders props.msg when passed", () => {
-    const msg = "new message";
-    const wrapper = shallowMount(HelloWorld, {
-      propsData: { msg }
+describe("DragArea.vue", () => {
+  it("renders listName when correctly", () => {
+    const listName = "TesteColumn";
+    const wrapper = shallowMount(DragArea, {
+      propsData: { listName }
     });
-    expect(wrapper.text()).to.include(msg);
+
+    expect(wrapper.find("#listName").text()).to.contains(listName);
   });
 });
